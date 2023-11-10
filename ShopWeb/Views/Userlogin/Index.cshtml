@@ -1,0 +1,113 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>CodePen - Login</title>
+
+    <link rel="stylesheet" href="~/loginTheme/css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+    <html lang="en-US">
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>Login</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+
+        <!--[if lt IE 9]>
+         <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div id="login">
+                <h1><center><span style="font-size: 30px;">ADMIN</span></center></h1>
+                <br />
+
+                <form action="javascript:void(0);" method="get">
+
+                    <fieldset class="clearfix">
+
+                        <p><span class="fontawesome-user"></span><input type="text" value="Username" onBlur="if(this.value == '') this.value = 'Username'" onFocus="if(this.value == 'Username') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                        <p><span class="fontawesome-lock"></span><input type="password" value="Password" onBlur="if(this.value == '') this.value = 'Password'" onFocus="if(this.value == 'Password') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                        <p><input class="button" href="/Home/Index" type="submit" value="Login" id="redirectButton"></p>
+                        <script>
+                            document.getElementById("redirectButton").addEventListener("click", function () {
+                                // Controller ve action bilgilerini belirleyin
+                                var controllerName = "Home"; // Hedef controller adı
+                                var actionName = "Index";   // Hedef action adı
+
+                                // Yönlendirme URL'sini oluşturun
+                                var redirectUrl = "/" + controllerName + "/" + actionName;
+
+                                // JavaScript ile sayfa yönlendirmesi yapın
+                                window.location.href = redirectUrl;
+                            });
+                        </script>
+
+
+                    </fieldset>
+
+                </form>
+
+            </div> <!-- end login -->
+
+        </div>
+
+    </body>
+</html>
+
+
+</body>
+
+</html>
+@* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Bootstrap Login Form Example</title>
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/loginTheme/css/style.css">
+
+</head>
+<body>
+
+    <main>
+        <article>
+
+            <div class="wrapper">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Please login</h2>
+                    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="" />
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+                    </label>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+                </form>
+            </div>
+        </article>
+    </main>
+
+</body>
+</html>
+
+ *@
